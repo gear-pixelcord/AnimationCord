@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About AnimationCord</title>
+  <style>
+    :root {
+      --bg: linear-gradient(180deg, #ff4d00, #cc2900);
+      --card: rgba(255, 255, 255, 0.08);
+      --accent: #ff4500;
+      --accent2: #ff9900;
+      --muted: #ffd1a3;
+      --text: #fff7f0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg);
+      color: var(--text);
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 800px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 160, 50, 0.05));
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 0 40px rgba(255, 69, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #ff6600, #ffcc33);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #ffcc66;
+    }
+
+    p {
+      margin-top: 0.6rem;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 1.1rem;
+    }
+
+    ul {
+      margin-top: 0.5rem;
+      margin-left: 1.2rem;
+      color: var(--muted);
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.75rem 2rem;
+      background: linear-gradient(90deg, #ff6600, #ffaa00);
+      color: white;
+      border: none;
+      border-radius: 999px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 94, 0, 0.5);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 0 30px rgba(255, 120, 0, 0.7);
+      background: linear-gradient(90deg, #ff7b00, #ffcc33);
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: #ffe0c2;
+      font-size: 0.9rem;
+      opacity: 0.9;
+      text-align: center;
+    }
+
+    .bg-animate {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 94, 0, 0.15), transparent 70%);
+      animation: rotateBG 25s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes rotateBG {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 420px) {
+      .card { padding: 1.5rem; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.4rem; }
+      p, li { font-size: 1rem; }
+      .cta-button { padding: 0.6rem 1.5rem; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="bg-animate"></div>
+
+    <h1>About AnimationCord</h1>
+
+    <h2>What is AnimationCord?</h2>
+    <p>
+      AnimationCord is a free, easy, and reliable platform for anyone aged <strong>10–99</strong> who wants to create animations.
+      Whether you’re a beginner or already an experienced animator, AnimationCord helps you bring your ideas to life quickly and creatively.
+    </p>
+
+    <h2>Features</h2>
+    <ul>
+      <li><strong>Free:</strong> No subscription required — get started instantly.</li>
+      <li><strong>Easy to use:</strong> Intuitive interface for beginners and pros alike.</li>
+      <li><strong>Reliable:</strong> Safe and fast platform to save and export your animations.</li>
+      <li><strong>Creative Freedom:</strong> Multiple tools and effects to make your animations stand out.</li>
+      <li><strong>Accessible:</strong> Works on any modern browser.</li>
+    </ul>
+
+    <h2>Why Choose AnimationCord?</h2>
+    <p>
+      We believe animation should be fun and accessible for everyone. No complicated software or steep learning curves. Just log in with your email and start creating your masterpiece.
+    </p>
+
+    <button class="cta-button" onclick="window.location.href='index.html'">
+      Back to Home
+    </button>
+
+    <footer>
+      Made with ❤️ by <strong>Pixelcord.Gear</strong>
+    </footer>
+  </div>
+</body>
+</html>
